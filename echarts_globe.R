@@ -23,7 +23,7 @@ globe <-
     lat, scalerank, bind = name, 
     coord_system = "globe", 
     blendMode = "lighter", 
-    size = 4,
+    size = 2.5,
     geo.label = list(show = FALSE)
   ) %>% 
   e_color(color = "#28A87D") %>% 
