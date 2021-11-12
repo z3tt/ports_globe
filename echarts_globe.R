@@ -2,7 +2,7 @@ library(tidyverse)
 library(echarts4r)
 library(echarts4r.assets)
 
-sf_podf_ports <- 
+df_ports <- 
   rnaturalearth::ne_download(
     category = "cultural", type = "ports", scale = "large", returnclass = "sf"
   ) %>% 
@@ -24,7 +24,11 @@ globe <-
     coord_system = "globe", 
     blendMode = "lighter", 
     size = 2.5,
-    geo.label = list(show = FALSE)
+    emphasis = list(
+      label = list(
+        show = FALSE
+      )
+    )
   ) %>% 
   e_color(color = "#28A87D") %>% 
   e_tooltip(formatter = htmlwidgets::JS("
@@ -33,4 +37,4 @@ globe <-
       }
     "))
 
-htmlwidgets::saveWidget(globe, file = "globe.html")
+htmlwidgets::saveWidget(globe, file = "./contributions/Day11_3D/globe.html")
