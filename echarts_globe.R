@@ -37,4 +37,4 @@ globe <-
       }
     "))
 
-htmlwidgets::saveWidget(globe, file = "./contributions/Day11_3D/globe.html")
+htmlwidgets::saveWidget(globe, file = "index.html")
